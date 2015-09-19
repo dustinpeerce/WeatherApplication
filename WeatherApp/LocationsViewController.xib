@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LocationsViewController">
+            <connections>
+                <outlet property="buttonEdit" destination="EVc-ZH-M0q" id="Tjn-K9-7X8"/>
+                <outlet property="tableView" destination="oSC-JD-QtR" id="eld-cA-L9A"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="oSC-JD-QtR" userLabel="tableViewLocations">
+                    <rect key="frame" x="0.0" y="65" width="600" height="527"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="rxj-Vt-rks"/>
+                        <outlet property="delegate" destination="-1" id="011-CH-Dx1"/>
+                    </connections>
+                </tableView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wEk-kS-axC" userLabel="navigationBar">
+                    <rect key="frame" x="0.0" y="21" width="600" height="44"/>
+                    <items>
+                        <navigationItem title="Locations" id="8gi-Bs-Iqg" userLabel="titleLocations">
+                            <barButtonItem key="leftBarButtonItem" title="Edit" id="EVc-ZH-M0q" userLabel="buttonEdit">
+                                <connections>
+                                    <action selector="buttonEditWasClicked:" destination="-1" id="TGk-xm-cbO"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="oSC-JD-QtR" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottomMargin" id="0pn-hA-04Q"/>
+                <constraint firstItem="oSC-JD-QtR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4aw-aX-Lnu"/>
+                <constraint firstItem="wEk-kS-axC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="21" id="9Wl-p5-EnA"/>
+                <constraint firstAttribute="trailing" secondItem="oSC-JD-QtR" secondAttribute="trailing" id="A9I-ao-6w9"/>
+                <constraint firstItem="oSC-JD-QtR" firstAttribute="top" secondItem="wEk-kS-axC" secondAttribute="bottom" id="jdM-Qv-x22"/>
+                <constraint firstItem="oSC-JD-QtR" firstAttribute="leading" secondItem="wEk-kS-axC" secondAttribute="leading" id="sbl-rZ-HvR"/>
+                <constraint firstItem="wEk-kS-axC" firstAttribute="trailing" secondItem="oSC-JD-QtR" secondAttribute="trailing" id="zX6-o2-7S7"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

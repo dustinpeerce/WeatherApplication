@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WeatherViewController">
+            <connections>
+                <outlet property="buttonRefresh" destination="J7Z-xA-rix" id="LN4-hL-nL3"/>
+                <outlet property="labelDate" destination="fFI-GD-cEq" id="EdQ-oQ-oa1"/>
+                <outlet property="labelLocation" destination="JnO-bV-wmd" id="CGp-kP-ueR"/>
+                <outlet property="labelRainData" destination="rby-M4-B5o" id="Jki-AV-IyD"/>
+                <outlet property="labelTemp" destination="MQL-Yb-tRO" id="RGB-eb-hjU"/>
+                <outlet property="labelWindData" destination="QHA-56-nsJ" id="e3a-lc-Xmp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Location Detected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JnO-bV-wmd" userLabel="labelLocation">
+                    <rect key="frame" x="8" y="157" width="584" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="38" id="N6B-d1-bwo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Date Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fFI-GD-cEq" userLabel="labelDate">
+                    <rect key="frame" x="216" y="203" width="168" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="168" id="FDF-N8-Oik"/>
+                        <constraint firstAttribute="height" constant="21" id="rBD-FF-SKb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KWh-el-8sO" userLabel="labelWindTitle">
+                    <rect key="frame" x="190" y="370" width="68" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="68" id="1EW-4U-BCH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QHA-56-nsJ" userLabel="labelWindData">
+                    <rect key="frame" x="164" y="399" width="120" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="BmB-AO-sBT"/>
+                        <constraint firstAttribute="width" constant="120" id="Y0K-CO-JBP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rby-M4-B5o" userLabel="labelRainData">
+                    <rect key="frame" x="316" y="399" width="120" height="32"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rain" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Iyk-zh-vPp" userLabel="labelRainTitle">
+                    <rect key="frame" x="342" y="370" width="68" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="68" id="7og-Lz-1sK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MQL-Yb-tRO" userLabel="labelTemp">
+                    <rect key="frame" x="190" y="238" width="220" height="124"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="95"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ecw-Mq-rx6" userLabel="navigationBar">
+                    <rect key="frame" x="0.0" y="21" width="600" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Vn4-8Q-i9G"/>
+                    </constraints>
+                    <items>
+                        <navigationItem title="Weather Data" id="iMt-Qg-CDb" userLabel="titleWeatherData">
+                            <barButtonItem key="leftBarButtonItem" title="Locations" id="RWs-yS-i6J" userLabel="buttonLocations">
+                                <connections>
+                                    <action selector="buttonLocationsWasClicked:" destination="-1" id="fAp-Ld-wDh"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" title="Account" id="aTX-JS-OBu" userLabel="buttonAccount">
+                                <connections>
+                                    <action selector="buttonAccountWasClicked:" destination="-1" id="y6I-Wb-MHD"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7Z-xA-rix" userLabel="buttonRefresh">
+                    <rect key="frame" x="245" y="105" width="110" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="110" id="LK6-aG-bxj"/>
+                        <constraint firstAttribute="height" constant="44" id="ZrP-6u-dkb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <state key="normal" title="Refresh">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonRefreshWasClicked:" destination="-1" eventType="touchUpInside" id="8Vj-ht-uv2"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Iyk-zh-vPp" firstAttribute="leading" secondItem="KWh-el-8sO" secondAttribute="trailing" constant="84" id="1Ox-Cl-NRq"/>
+                <constraint firstItem="fFI-GD-cEq" firstAttribute="centerX" secondItem="MQL-Yb-tRO" secondAttribute="centerX" id="3yd-68-Z0D"/>
+                <constraint firstItem="rby-M4-B5o" firstAttribute="baseline" secondItem="QHA-56-nsJ" secondAttribute="baseline" id="AZd-Ba-5Rc"/>
+                <constraint firstItem="JnO-bV-wmd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="GSd-8u-2Qm"/>
+                <constraint firstItem="KWh-el-8sO" firstAttribute="top" secondItem="MQL-Yb-tRO" secondAttribute="bottom" constant="8" symbolic="YES" id="JCG-eV-jHD"/>
+                <constraint firstAttribute="trailing" secondItem="Ecw-Mq-rx6" secondAttribute="trailing" id="PIK-u1-8G5"/>
+                <constraint firstItem="rby-M4-B5o" firstAttribute="firstBaseline" secondItem="QHA-56-nsJ" secondAttribute="firstBaseline" id="VgC-Ke-S8B"/>
+                <constraint firstItem="KWh-el-8sO" firstAttribute="baseline" secondItem="Iyk-zh-vPp" secondAttribute="baseline" id="XAx-oj-Puy"/>
+                <constraint firstItem="Ecw-Mq-rx6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cqV-Gj-kEt"/>
+                <constraint firstItem="Iyk-zh-vPp" firstAttribute="centerX" secondItem="rby-M4-B5o" secondAttribute="centerX" id="khy-sf-IuG"/>
+                <constraint firstItem="Ecw-Mq-rx6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="21" id="lET-H9-K3H"/>
+                <constraint firstItem="rby-M4-B5o" firstAttribute="leading" secondItem="QHA-56-nsJ" secondAttribute="trailing" constant="32" id="lqS-wr-Mql"/>
+                <constraint firstItem="QHA-56-nsJ" firstAttribute="centerX" secondItem="KWh-el-8sO" secondAttribute="centerX" id="lt6-av-6DK"/>
+                <constraint firstItem="KWh-el-8sO" firstAttribute="leading" secondItem="MQL-Yb-tRO" secondAttribute="leading" id="oKO-v3-Gh0"/>
+                <constraint firstItem="J7Z-xA-rix" firstAttribute="centerX" secondItem="Ecw-Mq-rx6" secondAttribute="centerX" id="pWc-qH-2bf"/>
+                <constraint firstItem="MQL-Yb-tRO" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="pgJ-gN-wtJ"/>
+                <constraint firstItem="J7Z-xA-rix" firstAttribute="centerX" secondItem="JnO-bV-wmd" secondAttribute="centerX" id="rIq-Fb-X8L"/>
+                <constraint firstItem="JnO-bV-wmd" firstAttribute="centerX" secondItem="fFI-GD-cEq" secondAttribute="centerX" id="rbq-s6-z5L"/>
+                <constraint firstItem="MQL-Yb-tRO" firstAttribute="top" secondItem="fFI-GD-cEq" secondAttribute="bottom" constant="14" id="tSr-vk-WtW"/>
+                <constraint firstItem="MQL-Yb-tRO" firstAttribute="trailing" secondItem="Iyk-zh-vPp" secondAttribute="trailing" id="ub1-Zq-XSK"/>
+                <constraint firstItem="fFI-GD-cEq" firstAttribute="top" secondItem="JnO-bV-wmd" secondAttribute="bottom" constant="8" symbolic="YES" id="wgb-Dx-Z7G"/>
+                <constraint firstItem="QHA-56-nsJ" firstAttribute="top" secondItem="KWh-el-8sO" secondAttribute="bottom" constant="8" symbolic="YES" id="xhU-3K-dar"/>
+                <constraint firstItem="JnO-bV-wmd" firstAttribute="top" secondItem="J7Z-xA-rix" secondAttribute="bottom" constant="8" symbolic="YES" id="xoo-5x-XSV"/>
+                <constraint firstItem="J7Z-xA-rix" firstAttribute="top" secondItem="Ecw-Mq-rx6" secondAttribute="bottom" constant="40" id="zHe-ve-NMH"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

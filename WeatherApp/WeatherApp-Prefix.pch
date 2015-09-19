@@ -1,0 +1,42 @@
+//
+//  WeatherApp-Prefix.pch
+//  WeatherApp
+//
+//  Created by it on 9/17/15.
+//  Copyright (c) 2015 dustinpeerce. All rights reserved.
+//
+
+#import <Availability.h>
+
+#ifndef WeatherApp_WeatherApp_Prefix_pch
+#define WeatherApp_WeatherApp_Prefix_pch
+
+#ifndef TARGET_OS_IOS
+#define TARGET_OS_IOS TARGET_OS_IPHONE
+#endif
+
+#ifndef TARGET_OS_WATCH
+#define TARGET_OS_WATCH 0
+#endif
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <QuartzCore/QuartzCore.h>
+    #import <CoreLocation/CoreLocation.h>
+    #import <MobileCoreServices/MobileCoreServices.h>
+    #import <SystemConfiguration/SystemConfiguration.h>
+    #import <sqlite3.h>
+
+    #import "AFNetworking.h"
+    #import "SVProgressHUD.h"
+    #import "IIViewDeckController.h"
+    #import "IISideController.h"
+    #import "Constants.h"
+#endif
+
+#endif
